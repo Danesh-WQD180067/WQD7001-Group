@@ -1,0 +1,7 @@
+library(tidyverse)
+library(mlbench)
+library(caret)
+require(caTools)
+heart_disease <- read.csv("data/clean_cardio_train.csv")
+heart_disease <- subset(heart_disease, select = -c(ï..ID))
+load("models.RData")
