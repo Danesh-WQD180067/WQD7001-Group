@@ -1,0 +1,32 @@
+Cardiovascular Diseases
+========================================================
+date: May 27, 2019
+author:
+KAPPA team:
+- Danesh Durairetnam (WQD180067)
+- Xu Xiang (WQD180061)
+- Sritharan Sivguru (WQD180086)
+autosize: true
+
+Our Data Science process
+========================================================
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+The App description
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Experience using this App
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
