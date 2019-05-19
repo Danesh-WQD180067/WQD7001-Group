@@ -1,0 +1,13 @@
+name: heart_disease_prediction
+title: heart_disease_prediction
+username:
+account: wqd180067
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 937083
+bundleId: 2094400
+url: https://wqd180067.shinyapps.io/heart_disease_prediction/
+when: 1558252990.16224
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app.R_deprecate|ml.R|models_accuracy.RData|presentation.html|presentation.Rmd|WQD7001_Group_Presentation.md|WQD7001_Group_Presentation.Rpres|data/cardio_train.csv|data/cardio_train.xlsx|data/cardio_train_numeric.csv|data/cardio_train_numeric.xlsx
