@@ -1,32 +1,57 @@
-Cardiovascular Diseases
+Predicting the Risk of Cardiovascular Disease
 ========================================================
-date: May 27, 2019
-author:
-KAPPA team:
-- Danesh Durairetnam (WQD180067)
-- Xu Xiang (WQD180061)
-- Sritharan Sivguru (WQD180086)
 autosize: true
+width: 1024
+height: 768
+date: May 27, 2019
+author: KAPPA team
 
-Our Data Science process
+- Danesh Durairetnam
+- Xu Xiang
+- Sritharan Sivguru
+
+Introduction
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+The goal of this project is to analyze anonymous patient health data and determine whether they are at risk of having a heart disease based on a combination of the following variables:
+- Age, Gender, Height, Weight
+- Blood pressure, Cholesterol level, Glucose Level
+- Smoker/Non-smoker, Alcoholic/Non-alcoholic, Physically active/inactive
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+The app is built using Shiny and R. The dataset used for training and prediction is taken from Kaggle:
+- Cardiovascular Disease dataset: 
+https://www.kaggle.com/sulianova/cardiovascular-disease-dataset
+- Dataset is in one CSV file: cardio_train.csv
 
-The App description
+Our Methodology
 ========================================================
 
-```{r}
-summary(cars)
-```
+The dataset is imported into Excel for cleaning and exploration, then exported back into CSV as clean_cardio_train.csv.
 
-Experience using this App
+We then experimented and built the app with the following prediction algorithms using the Cardiovascular_Disease variable for training and comparison:
+- Generalized Boosted Modeling (GBM)
+- C5.0 Decision Trees
+- Classification And Regression Trees (CART)
+- K Nearest Neighbors (KNN)
+- Linear Discriminant Analysis (LDA)
+- Naive Bayes
+
+The App Description
 ========================================================
 
-```{r, echo=FALSE}
-plot(cars)
-```
+- The app starts with a default set of values for all input variables with all algorithm outputs set to No.
+- The user could then set the inputs by moving the sliders and selecting a value from drop down lists for each variable.
+- The user is presented with the prediction for each algorithm in realtime:
+
+![alt text](app_screenshot.jpg)
+
+Experience making this App
+========================================================
+
+This is our first project using Shiny to build a prediction app.
+We tried as much as possible to make the app simple to use and understand.
+
+The dataset used had 70,000 entries and 13 variables. While the dataset is significant, we do not expect it to accurately predict the risk of heart disease for any user. So please consult a doctor for an actual diagnosis! :-)
+
+- We hope users find our app interesting and easy to use as well.
+
