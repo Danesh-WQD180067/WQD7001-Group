@@ -39,7 +39,8 @@ We then experimented and built the app with the following prediction algorithms 
 The App Description
 ========================================================
 
-- The app starts with a default set of values for all input variables with all algorithm outputs set to No.
+- App URL: https://wqd180067.shinyapps.io/heart_disease_prediction/
+- The app starts with a default set of values for all input variables (mean for ranged values, mod for dropdown values), and all algorithm outputs set to No.
 - The user could then set the inputs by moving the sliders and selecting a value from drop down lists for each variable.
 - The user is presented with the prediction for each algorithm in realtime:
 
@@ -54,4 +55,5 @@ We tried as much as possible to make the app simple to use and understand.
 The dataset used had 70,000 entries and 13 variables. While the dataset is significant, we do not expect it to accurately predict the risk of heart disease for any user. So please consult a doctor for an actual diagnosis! :-)
 
 - We hope users find our app interesting and easy to use as well.
+- Project GitHub: https://github.com/Danesh-WQD180067/WQD7001-Group
 
