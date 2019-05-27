@@ -31,17 +31,11 @@ function(input, output) {
     colnames(prediction)[2] <- "Prediction"
     
     output$piePlot <- renderPlot({
-      # generate bins based on input$bins from ui.R
-      x    <- prediction %>% 
-        group_by(Prediction) %>%
-        summarise(no_rows = length(Prediction))
       
-      # draw the pie chart of the predictions
-      pie(x$no_rows, 
-          labels = c("No","Yes"), 
-          main = "Cardiovascular Disease Prediction (Yes/No)",
-          col = c("#00FFFFFF","#FF0000FF")
-          )
+      ggplot(prediction, aes(x=factor(1), fill=Prediction)) +
+        geom_bar(width = 1) +
+        coord_polar("y") +
+        labs(title = "Cardiovascular Disease (Yes/No)")
     })
     
     prediction
