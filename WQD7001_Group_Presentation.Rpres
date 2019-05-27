@@ -8,7 +8,7 @@ author: KAPPA team
 
 - Danesh Durairetnam
 - Xu Xiang
-- Sritharan Sivguru
+- Sritharan Sivaguru
 
 Introduction
 ========================================================
@@ -43,7 +43,6 @@ The App Description
 - The app starts with a default set of values for all input variables (mean for ranged values, mod for dropdown values), and all algorithm outputs set to No.
 - The user could then set the inputs by moving the sliders and selecting a value from drop down lists for each variable.
 - The user is presented with the prediction for each algorithm in realtime:
-
 ![alt text](app_screenshot.jpg)
 
 Experience making this App
