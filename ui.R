@@ -78,9 +78,22 @@ fluidPage(
       )
     ),
     mainPanel(
-      #p("Input your health details and"),
-      plotOutput("piePlot"),
-      tableOutput("view")
+      tabsetPanel(
+        tabPanel('Prediction',
+                 plotOutput("piePlot"),
+                 tableOutput("view")
+        ),
+        tabPanel('About',
+                 p(),
+                 p("This application would evaluate if an individual has cardiovascular disease based on several physiological attributes"),
+                 p("The menu on the left let user to select their health attributes, gender, age, height, weight, blood pressure, 
+                   chloslestrol level, glucose level, smoke, alcohol consumption and physical active status."),
+                 p("1. User should select all the related attributes."),
+                 p("2. Six different models will then predict if the user has cardiovascular disease."),
+                 p("3. The prediction results can be viewed in the Prediction tab")
+                 )
+        
+      )
     )
   )
 )
