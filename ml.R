@@ -42,8 +42,23 @@ results <- resamples(list(lda=fit.lda, knn=fit.knn, nb=fit.nb, cart=fit.cart, c5
 #bagging=fit.treebag,
 
 save(results, file = "models_accuracy.RData")
+load("models_accuracy.RData")
+load("models.RData")
+test_results <- data.frame(test_data$Cardiovascular_Disease)
 
-test_data$predicted <- predict(fit.gbm, test_data)
+test_results$predicted_lda <- predict(fit.lda, test_data)
+test_results$predicted_knn <- predict(fit.knn, test_data)
+test_results$predicted_nb <- predict(fit.nb, test_data)
+test_results$predicted_cart <- predict(fit.cart, test_data)
+test_results$predicted_c50 <- predict(fit.c50, test_data)
+test_results$predicted_gbm <- predict(fit.gbm, test_data)
+
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_lda)
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_knn)
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_nb)
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_cart)
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_c50)
+confusionMatrix(test_results$test_data.Cardiovascular_Disease, test_results$predicted_gbm)
 
 # Table comparison
 summary(results)

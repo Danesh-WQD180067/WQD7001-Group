@@ -1,13 +1,5 @@
 function(input, output) {
-  # output$distPlot <- renderPlot({
-  #   # generate bins based on input$bins from ui.R
-  #   x    <- faithful[, 2]
-  #   bins <- seq(min(x), max(x), length.out = input$bins + 1)
-  # 
-  #   # draw the histogram with the specified number of bins
-  #   hist(x, breaks = bins, col = 'darkgray', border = 'white')
-  # })
-  
+
   output$view <- renderTable({
     input_list <- reactiveValuesToList(input)
     
@@ -36,8 +28,26 @@ function(input, output) {
     
     prediction <- data.frame(model_list, prediction_list)
     colnames(prediction)[1] <- "Model"
-    colnames(prediction)[2] <- "Heart Disease Prediction"
+    colnames(prediction)[2] <- "Prediction"
+    
+    output$piePlot <- renderPlot({
+      # generate bins based on input$bins from ui.R
+      x    <- prediction %>% 
+        group_by(Prediction) %>%
+        summarise(no_rows = length(Prediction))
+      
+      # draw the pie chart of the predictions
+      pie(x$no_rows, 
+          labels = c("No","Yes"), 
+          main = "Cardiovascular Disease Prediction (Yes/No)",
+          col = c("#00FFFFFF","#FF0000FF")
+          )
+    })
+    
     prediction
+    
   })
+  
+  
   
 }
