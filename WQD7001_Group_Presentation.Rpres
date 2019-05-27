@@ -28,13 +28,13 @@ Our Methodology
 
 The dataset is imported into Excel for cleaning and exploration, then exported back into CSV as clean_cardio_train.csv.
 
-We then experimented and built the app with the following prediction algorithms using the Cardiovascular_Disease variable for training and comparison:
-- Generalized Boosted Modeling (GBM)
-- C5.0 Decision Trees
-- Classification And Regression Trees (CART)
-- K Nearest Neighbors (KNN)
-- Linear Discriminant Analysis (LDA)
-- Naive Bayes
+We then experimented and built the app with the following prediction algorithms using the Cardiovascular_Disease variable for training and comparison, with the following accuracy [%]:
+- Generalized Boosted Modeling (GBM) [73.7%]
+- C5.0 Decision Trees [73.5%]
+- Classification And Regression Trees (CART) [72.1%]
+- K Nearest Neighbors (KNN) [72.8%]
+- Linear Discriminant Analysis (LDA) [64.7%]
+- Naive Bayes [63.8%]
 
 The App Description
 ========================================================
